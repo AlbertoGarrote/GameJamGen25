@@ -14,6 +14,12 @@ public class Timer : MonoBehaviour
         elapsedTime = 420;
         GameObject player = GameObject.FindWithTag("Player");
         player.GetComponent<Player>().BotonPulsado += BotonPulsado;
+        GameObject[] listaEventos = GameObject.FindGameObjectsWithTag("evento");
+
+        foreach (GameObject obj in listaEventos) 
+        {
+            obj.GetComponent<GeneralEventos>().Pillado += Pillado;
+        }
     }
     void Update()
     {
@@ -27,15 +33,18 @@ public class Timer : MonoBehaviour
             Debug.Log("SE ACABÓ");
         }
 
-        if (horas < 7)
+        if (elapsedTime < 420)
         {
-            horas = 7;
-            minutos = 0;
+            elapsedTime = 420;
         }
     }
 
     private void BotonPulsado(object sender, float tiempoModificar)
     {
         elapsedTime += tiempoModificar;
+    }
+    private void Pillado(object sender, float tiempoModificar)
+    {
+        elapsedTime -= tiempoModificar;
     }
 }

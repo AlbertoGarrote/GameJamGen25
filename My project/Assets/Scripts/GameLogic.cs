@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    public int randomNumber, intervaloEventos;
+    public int randomNumber;
+    public float intervaloEventos;
 
     public EventHandler<int> Evento1Lanzados;
     public EventHandler<int> Evento2Lanzados;
@@ -14,11 +15,10 @@ public class GameLogic : MonoBehaviour
     public EventHandler<int> Evento5Lanzados;
     public EventHandler<int> Evento6Lanzados;
     public EventHandler<int> Evento7Lanzados;
-    public EventHandler<int> Evento8Lanzados;
 
     void Start()
     {
-        intervaloEventos = 4;
+        intervaloEventos = 6;
         GameObject timer = GameObject.FindWithTag("Timer");
         Player scriptTimer = timer.GetComponent<Player>();
     }
@@ -26,11 +26,13 @@ public class GameLogic : MonoBehaviour
     void Update()
     {
         randomNumber = UnityEngine.Random.Range(1, 9);
-        intervaloEventos -= 1;
+        intervaloEventos -= Time.deltaTime;
 
         if (intervaloEventos < 0)
         {
-            LlamarEvento(randomNumber);
+            intervaloEventos = 6;
+            Debug.Log(randomNumber);
+            LlamarEvento(3);
         }
     }
 
@@ -58,9 +60,6 @@ public class GameLogic : MonoBehaviour
                 break;
             case 7:
                 Evento7Lanzados?.Invoke(this, 1);
-                break;
-            case 8:
-                Evento8Lanzados?.Invoke(this, 1);
                 break;
         }
     }
