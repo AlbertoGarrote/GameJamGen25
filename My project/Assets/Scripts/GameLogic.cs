@@ -18,7 +18,7 @@ public class GameLogic : MonoBehaviour
 
     void Start()
     {
-        intervaloEventos = 6;
+        intervaloEventos = 4;
         GameObject timer = GameObject.FindWithTag("Timer");
         Player scriptTimer = timer.GetComponent<Player>();
     }
@@ -35,9 +35,9 @@ public class GameLogic : MonoBehaviour
 
         if (intervaloEventos < 0)
         {
-            intervaloEventos = 6;
+            intervaloEventos = 4;
             Debug.Log(randomNumber);
-            LlamarEvento(6);
+            LlamarEvento(randomNumber);
         }
         lastRandom = randomNumber;
     }

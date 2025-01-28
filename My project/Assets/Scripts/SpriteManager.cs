@@ -6,6 +6,8 @@ public class SpriteManager : MonoBehaviour
 {
     public GameObject puertaAbierta;
     public GameObject puertaCerrada;
+    public GameObject trampillaAbierta;
+    public GameObject trampillaCerrada;
 
     private void Start()
     {
@@ -22,5 +24,17 @@ public class SpriteManager : MonoBehaviour
     {
         puertaAbierta.SetActive(false);
         puertaCerrada.SetActive(true);
+    }
+
+    public void AbrirTrampilla()
+    {
+        trampillaAbierta.SetActive(true);
+        trampillaCerrada.SetActive(false);
+    }
+
+    public void CerrarTrampilla()
+    {
+        trampillaAbierta.SetActive(false);
+        trampillaCerrada.SetActive(true);
     }
 }
