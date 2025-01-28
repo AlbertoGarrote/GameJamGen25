@@ -24,6 +24,7 @@ public class GeneralEventos : MonoBehaviour
     public void realizarEvento()
     {
         terminado = false;
+        ejecutado = false;
         StartCoroutine("evento");
     }
 
@@ -33,7 +34,7 @@ public class GeneralEventos : MonoBehaviour
         animator.SetBool("accion", true);
 
         yield return new WaitForSeconds(0.8f);
-        ejecutado = false;
+
         pillado = true;
         yield return new WaitForSeconds(2f);
         pillado = false;

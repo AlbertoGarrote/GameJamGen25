@@ -56,8 +56,17 @@ public class Timer : MonoBehaviour
     IEnumerator ModReloj(float tiempoModificar)
     {
         martilloInst = Instantiate(martillo, new Vector3(11f, 0.85f, 0f), Quaternion.identity);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
+        horasRestaInst = Instantiate(horasResta, new Vector3(6.3f, 0.3f, 0f), Quaternion.identity);
         elapsedTime -= tiempoModificar;
+        yield return new WaitForSeconds(1f);
         Destroy(martilloInst);
+        yield return new WaitForSeconds(1.5f);
+        Destroy(horasRestaInst);
+    }
+
+    public int GetHoras() 
+    {
+        return horas;
     }
 }

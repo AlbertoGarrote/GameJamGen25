@@ -8,6 +8,12 @@ public class GameLogic : MonoBehaviour
     public int randomNumber;
     public int lastRandom = 0;
     public float intervaloEventos;
+    public float nivelintervalo1;
+    public float nivelintervalo2;
+    public float nivelintervalo3;
+    private int horaActual;
+
+    private Timer scriptTimer;
 
     public EventHandler<int> Evento1Lanzados;
     public EventHandler<int> Evento2Lanzados;
@@ -19,27 +25,46 @@ public class GameLogic : MonoBehaviour
 
     void Start()
     {
-        intervaloEventos = 3.5f;
-        GameObject timer = GameObject.FindWithTag("Timer");
-        Player scriptTimer = timer.GetComponent<Player>();
+        intervaloEventos = 5f;
+        nivelintervalo1 = 5f;
+        nivelintervalo2 = 4f;
+        nivelintervalo3 = 3f;
+        GameObject timerJuego = GameObject.FindWithTag("Timer");
+        scriptTimer = timerJuego.GetComponent<Timer>();
     }
 
     void Update()
     {
+        horaActual = scriptTimer.GetHoras();
         do 
         {
             randomNumber = UnityEngine.Random.Range(1, 8);
         } 
         while (randomNumber == lastRandom);
         
-        intervaloEventos -= Time.deltaTime;
-
         if (intervaloEventos < 0)
         {
+            if (horaActual < 12)
+            {
+                intervaloEventos = nivelintervalo1;
+            }
+            else if (horaActual >= 12 &&  horaActual <= 18) 
+            {
+                intervaloEventos = nivelintervalo2;
+            }
+            else if (horaActual > 18)
+            {
+                intervaloEventos = nivelintervalo3;
+            }
+
+            Debug.Log(intervaloEventos);
             lastRandom = randomNumber;
-            intervaloEventos = 3.5f;
-            Debug.Log(randomNumber);
+            //Debug.Log(randomNumber);
             LlamarEvento(randomNumber);
+        }
+        else
+        {
+            intervaloEventos -= Time.deltaTime;
         }
         
     }
