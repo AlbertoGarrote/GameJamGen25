@@ -59,9 +59,8 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         horasRestaInst = Instantiate(horasResta, new Vector3(6.3f, 0.3f, 0f), Quaternion.identity);
         elapsedTime -= tiempoModificar;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.6f);
         Destroy(martilloInst);
-        yield return new WaitForSeconds(1.5f);
         Destroy(horasRestaInst);
     }
 

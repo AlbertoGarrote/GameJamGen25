@@ -62,6 +62,11 @@ public class GeneralEventos : MonoBehaviour
         return terminado;
     }
 
+    public bool heDetectado()
+    {
+        return ejecutado;
+    }
+
     public void SetFalse()
     {
         terminado = false;
