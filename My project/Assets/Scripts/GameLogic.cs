@@ -25,7 +25,7 @@ public class GameLogic : MonoBehaviour
 
     void Update()
     {
-        randomNumber = UnityEngine.Random.Range(1, 9);
+        randomNumber = UnityEngine.Random.Range(1, 6);
 
         if (lastRandom == randomNumber) 
         {
@@ -37,7 +37,7 @@ public class GameLogic : MonoBehaviour
         {
             intervaloEventos = 6;
             Debug.Log(randomNumber);
-            LlamarEvento(5);
+            LlamarEvento(6);
         }
         lastRandom = randomNumber;
     }
