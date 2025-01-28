@@ -32,7 +32,7 @@ public class GameLogic : MonoBehaviour
         {
             intervaloEventos = 6;
             Debug.Log(randomNumber);
-            LlamarEvento(3);
+            LlamarEvento(5);
         }
     }
 

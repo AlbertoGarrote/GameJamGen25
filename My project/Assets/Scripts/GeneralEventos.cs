@@ -11,13 +11,14 @@ public class GeneralEventos : MonoBehaviour
     private Sprite spriteInicial;
     public Animator animator;
     public EventHandler<float> Pillado;
-    private bool pillado, ejecutado;
+    private bool pillado, ejecutado, terminado;
     
     void Start()
     {
         spriteInicial = spriteRenderer.sprite;
         pillado = false;
         ejecutado = false;
+        terminado = false;
     }
 
     public void realizarEvento()
@@ -35,8 +36,11 @@ public class GeneralEventos : MonoBehaviour
         pillado = true;
         yield return new WaitForSeconds(2f);
         pillado = false;
-
+        
         animator.SetBool("accion", false);
+        yield return new WaitForSeconds(0.5f);
+        terminado = true;
+
     }
 
     private void Update()
@@ -49,5 +53,15 @@ public class GeneralEventos : MonoBehaviour
             Debug.Log("te he pillao");
         }
         
+    }
+
+    public bool heTerminao() 
+    {
+        return terminado;
+    }
+
+    public void SetFalse()
+    {
+        terminado = false;
     }
 }

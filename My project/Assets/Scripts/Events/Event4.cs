@@ -5,6 +5,7 @@ using UnityEngine;
 public class Event4 : MonoBehaviour
 {
     public GeneralEventos Manager;
+    public SpriteManager SpriteManager;
 
     private void Start()
     {
@@ -14,6 +15,16 @@ public class Event4 : MonoBehaviour
     
     private void HacerAccion(object sender, int i) 
     {
+        SpriteManager.AbrirPuerta();
         Manager.realizarEvento();
+    }
+
+    private void Update()
+    {
+        if (Manager.heTerminao() == true) 
+        {
+            SpriteManager.CerrarPuerta();
+            Manager.SetFalse();
+        }
     }
 }
