@@ -23,8 +23,8 @@ public class Event4 : MonoBehaviour
     {
         if (Manager.heTerminao() == true) 
         {
-            SpriteManager.CerrarPuerta();
             Manager.SetFalse();
+            SpriteManager.CerrarPuerta();
         }
     }
 }

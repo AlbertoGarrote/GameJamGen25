@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
-    public int randomNumber;
+    public int randomNumber, lastRandom = 0;
     public float intervaloEventos;
 
     public EventHandler<int> Evento1Lanzados;
@@ -26,6 +26,11 @@ public class GameLogic : MonoBehaviour
     void Update()
     {
         randomNumber = UnityEngine.Random.Range(1, 9);
+
+        if (lastRandom == randomNumber) 
+        {
+            randomNumber++;
+        }
         intervaloEventos -= Time.deltaTime;
 
         if (intervaloEventos < 0)
@@ -34,6 +39,7 @@ public class GameLogic : MonoBehaviour
             Debug.Log(randomNumber);
             LlamarEvento(5);
         }
+        lastRandom = randomNumber;
     }
 
     private void LlamarEvento(int i)
