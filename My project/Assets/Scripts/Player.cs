@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Sprite nuevoSprite;
     private Sprite spriteViejo;
     public GameObject brazo;
+    public SpriteManager spriteManager;
 
     public EventHandler<float> BotonPulsado;
     
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
+            spriteManager.RelojPulsado();
             brazo.SetActive(true);
             animator.SetBool("pulsado", true);
             spriteRenderer.sprite = nuevoSprite;
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
         }
         else 
         {
+            spriteManager.RelojNormal();
             brazo.SetActive(false);
             animator.SetBool("pulsado", false);
             spriteRenderer.sprite = spriteViejo;

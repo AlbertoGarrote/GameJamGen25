@@ -8,6 +8,10 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     private float elapsedTime;
     public int horas, minutos;
+    public GameObject martillo;
+    private GameObject martilloInst;
+    public GameObject horasResta;
+    private GameObject horasRestaInst;
 
     private void Start()
     {
@@ -16,7 +20,7 @@ public class Timer : MonoBehaviour
         player.GetComponent<Player>().BotonPulsado += BotonPulsado;
         GameObject[] listaEventos = GameObject.FindGameObjectsWithTag("evento");
 
-        foreach (GameObject obj in listaEventos) 
+        foreach (GameObject obj in listaEventos)
         {
             obj.GetComponent<GeneralEventos>().Pillado += Pillado;
         }
@@ -28,7 +32,7 @@ public class Timer : MonoBehaviour
         minutos = Mathf.FloorToInt(elapsedTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", horas, minutos);
 
-        if (horas == 22) 
+        if (horas == 22)
         {
             Debug.Log("SE ACABÓ");
         }
@@ -45,6 +49,15 @@ public class Timer : MonoBehaviour
     }
     private void Pillado(object sender, float tiempoModificar)
     {
+        StartCoroutine(ModReloj(tiempoModificar));
+        
+    }
+
+    IEnumerator ModReloj(float tiempoModificar)
+    {
+        martilloInst = Instantiate(martillo, new Vector3(11f, 0.85f, 0f), Quaternion.identity);
+        yield return new WaitForSeconds(1.5f);
         elapsedTime -= tiempoModificar;
+        Destroy(martilloInst);
     }
 }
