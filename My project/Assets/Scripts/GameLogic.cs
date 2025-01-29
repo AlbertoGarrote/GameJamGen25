@@ -26,9 +26,9 @@ public class GameLogic : MonoBehaviour
     void Start()
     {
         intervaloEventos = 5f;
-        nivelintervalo1 = 5f;
-        nivelintervalo2 = 4f;
-        nivelintervalo3 = 3f;
+        nivelintervalo1 = 6f;
+        nivelintervalo2 = 4.5f;
+        nivelintervalo3 = 3.5f;
         GameObject timerJuego = GameObject.FindWithTag("Timer");
         scriptTimer = timerJuego.GetComponent<Timer>();
     }
@@ -44,23 +44,23 @@ public class GameLogic : MonoBehaviour
         
         if (intervaloEventos < 0)
         {
-            if (horaActual < 12)
+            if (horaActual < 10)
             {
                 intervaloEventos = nivelintervalo1;
             }
-            else if (horaActual >= 12 &&  horaActual <= 18) 
+            else if (horaActual >= 10 &&  horaActual <= 17) 
             {
                 intervaloEventos = nivelintervalo2;
             }
-            else if (horaActual > 18)
+            else if (horaActual > 17)
             {
                 intervaloEventos = nivelintervalo3;
             }
 
-            Debug.Log(intervaloEventos);
+            //Debug.Log(intervaloEventos);
             lastRandom = randomNumber;
             //Debug.Log(randomNumber);
-            LlamarEvento(1);
+            LlamarEvento(7);
         }
         else
         {

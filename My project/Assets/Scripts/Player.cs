@@ -10,16 +10,16 @@ public class Player : MonoBehaviour
     public Sprite nuevoSprite;
     public GameObject brazo;
     public SpriteManager spriteManager;
-    public GameObject musicaPulsando;
 
     private Sprite spriteViejo;
-    private GameObject musicaPulsandoInst;
     private bool pulsao;
 
     public EventHandler<float> BotonPulsado;
     
     void Start()
     {
+        SoundManager.instance.PlaySound("ambiente", new Vector3(0, 0, 0));
+        SoundManager.instance.PlaySound("musicaFondo", new Vector3(0, 0, 0));
         pulsao = false;
         brazo.SetActive(false);
         spriteViejo = spriteRenderer.sprite;
@@ -38,7 +38,6 @@ public class Player : MonoBehaviour
         }
         else 
         {
-            Destroy(musicaPulsandoInst);
             pulsao = false;
             spriteManager.RelojNormal();
             brazo.SetActive(false);
@@ -51,7 +50,6 @@ public class Player : MonoBehaviour
     {
         if (pulsao == false)
         {
-            musicaPulsandoInst = Instantiate(musicaPulsando, new Vector3(11f, 0.85f, 0f), Quaternion.identity);
             pulsao = true;
             SoundManager.instance.PlaySound("pulsarBoton", new Vector3(0, 0, 0));
         }
