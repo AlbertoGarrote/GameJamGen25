@@ -237,3 +237,11 @@ MonoBehaviour:
     loop: 0
     audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
     source: {fileID: 0}
+  - name: musicaTension
+    clip: {fileID: 8300000, guid: 028c240a29a3e2b4fa6111a97e39680b, type: 3}
+    volume: 0.5
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
