@@ -6,6 +6,7 @@ public class Event4 : MonoBehaviour
 {
     public GeneralEventos Manager;
     public SpriteManager SpriteManager;
+    private bool heDetectado, Sejecutado;
 
     private void Start()
     {
@@ -17,14 +18,24 @@ public class Event4 : MonoBehaviour
     {
         SpriteManager.AbrirPuerta();
         Manager.realizarEvento();
+        Sejecutado = false;
+        SoundManager.instance.PlaySound("Aboss", new Vector3(0, 0, 0));
     }
 
     private void Update()
     {
+        heDetectado = Manager.heDetectado();
+
         if (Manager.heTerminao() == true) 
         {
             Manager.SetFalse();
             SpriteManager.CerrarPuerta();
+        }
+        
+        if (heDetectado == true && Sejecutado == false)
+        {
+            Sejecutado = true;
+            SoundManager.instance.PlaySound("Pboss", new Vector3(0, 0, 0));
         }
     }
 }

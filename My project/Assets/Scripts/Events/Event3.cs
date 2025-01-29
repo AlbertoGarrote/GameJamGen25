@@ -5,6 +5,7 @@ using UnityEngine;
 public class Event3 : MonoBehaviour
 {
     public GeneralEventos Manager;
+    private bool heDetectado, Sejecutado;
 
     private void Start()
     {
@@ -15,5 +16,18 @@ public class Event3 : MonoBehaviour
     private void HacerAccion(object sender, int i) 
     {
         Manager.realizarEvento();
+        Sejecutado = false;
+        SoundManager.instance.PlaySound("At1", new Vector3(0, 0, 0));
+    }
+
+    private void Update()
+    {
+        heDetectado = Manager.heDetectado();
+        if (heDetectado == true && Sejecutado == false)
+        {
+            Sejecutado = true;
+            SoundManager.instance.PlaySound("Pt1", new Vector3(0, 0, 0));
+        }
     }
 }
+

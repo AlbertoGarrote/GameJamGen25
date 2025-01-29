@@ -26,7 +26,7 @@ public class GameLogic : MonoBehaviour
     void Start()
     {
         intervaloEventos = 5f;
-        nivelintervalo1 = 6f;
+        nivelintervalo1 = 5.5f;
         nivelintervalo2 = 4.5f;
         nivelintervalo3 = 3.5f;
         GameObject timerJuego = GameObject.FindWithTag("Timer");
@@ -60,7 +60,7 @@ public class GameLogic : MonoBehaviour
             //Debug.Log(intervaloEventos);
             lastRandom = randomNumber;
             //Debug.Log(randomNumber);
-            LlamarEvento(7);
+            LlamarEvento(randomNumber);
         }
         else
         {
