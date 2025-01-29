@@ -60,7 +60,7 @@ public class GameLogic : MonoBehaviour
             Debug.Log(intervaloEventos);
             lastRandom = randomNumber;
             //Debug.Log(randomNumber);
-            LlamarEvento(randomNumber);
+            LlamarEvento(1);
         }
         else
         {

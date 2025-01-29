@@ -55,9 +55,12 @@ public class Timer : MonoBehaviour
 
     IEnumerator ModReloj(float tiempoModificar)
     {
+        yield return new WaitForSeconds(1f);
         martilloInst = Instantiate(martillo, new Vector3(11f, 0.85f, 0f), Quaternion.identity);
         yield return new WaitForSeconds(0.5f);
+        SoundManager.instance.PlaySound("GolpeMartillo", new Vector3(0, 0, 0));
         horasRestaInst = Instantiate(horasResta, new Vector3(6.3f, 0.3f, 0f), Quaternion.identity);
+        SoundManager.instance.PlaySound("horasRestar", new Vector3(0, 0, 0));
         elapsedTime -= tiempoModificar;
         yield return new WaitForSeconds(1.6f);
         Destroy(martilloInst);
