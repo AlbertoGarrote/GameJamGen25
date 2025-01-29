@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] TextMeshProUGUI timerText, timerPuntuacionText;
     private float elapsedTime;
-    public int horas, minutos;
-    public GameObject martillo;
+    public int horas, minutos, horasP, minutosP;
     private GameObject martilloInst;
-    public GameObject horasResta;
+    public GameObject horasResta, martillo, paneltransicion;
     private GameObject horasRestaInst;
+    public float tiempoPuntuacion;
 
     private void Start()
     {
-        elapsedTime = 420;
+        tiempoPuntuacion = 0;
+        //elapsedTime = 420;
+        elapsedTime = 1300;
         GameObject player = GameObject.FindWithTag("Player");
         player.GetComponent<Player>().BotonPulsado += BotonPulsado;
         GameObject[] listaEventos = GameObject.FindGameObjectsWithTag("evento");
@@ -34,13 +37,21 @@ public class Timer : MonoBehaviour
 
         if (horas == 22)
         {
-            Debug.Log("SE ACABÓ");
+            Time.timeScale = 0f;
+            PlayerPrefs.SetFloat("Puntaje", tiempoPuntuacion);
+            PlayerPrefs.Save();  
+            StartCoroutine("final");
         }
 
         if (elapsedTime < 420)
         {
             elapsedTime = 420;
         }
+
+        tiempoPuntuacion += Time.deltaTime;
+        horasP = Mathf.FloorToInt(tiempoPuntuacion / 60);
+        minutosP = Mathf.FloorToInt(tiempoPuntuacion % 60);
+        timerPuntuacionText.text = string.Format("{0:00}:{1:00}", horasP, minutosP);
     }
 
     private void BotonPulsado(object sender, float tiempoModificar)
@@ -70,5 +81,13 @@ public class Timer : MonoBehaviour
     public int GetHoras() 
     {
         return horas;
+    }
+
+    IEnumerator final()
+    {
+        paneltransicion.SetActive(true);
+        yield return new WaitForSecondsRealtime(1);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("EscenaFinal");
     }
 }

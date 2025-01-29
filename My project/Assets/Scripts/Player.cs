@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
             brazo.SetActive(true);
             animator.SetBool("pulsado", true);
             spriteRenderer.sprite = nuevoSprite;
-            BotonPulsado?.Invoke(this,0.5f);
+            BotonPulsado?.Invoke(this,0.4f);
         }
         else 
         {

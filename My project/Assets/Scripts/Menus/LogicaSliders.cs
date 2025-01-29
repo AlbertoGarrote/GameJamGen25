@@ -33,7 +33,7 @@ public class LogicaSliders : MonoBehaviour
 
     private void LoadValor()
     {
-        sliderVolumen.value = PlayerPrefs.GetFloat("volumenAudio");
+        sliderVolumen.value = PlayerPrefs.GetFloat("volumenAudio", 0.5f);
         ChangeVolumenSlider();
     }
 }

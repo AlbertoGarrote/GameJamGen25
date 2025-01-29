@@ -47,7 +47,7 @@ public class GeneralEventos : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && pillado == true && ejecutado == false)
+        if (Input.GetKey(KeyCode.Mouse0) && pillado == true && ejecutado == false && Time.timeScale == 1)
         {
             spriteRenderer.sprite = spritePillado;
             ejecutado = true;

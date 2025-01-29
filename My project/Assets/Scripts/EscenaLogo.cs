@@ -8,6 +8,8 @@ public class EscenaLogo : MonoBehaviour
     public GameObject paneltransicion;
     private void Start()
     {
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.Save();
         StartCoroutine("inicio");
     }
     IEnumerator inicio()

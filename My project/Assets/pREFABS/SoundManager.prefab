@@ -242,6 +242,6 @@ MonoBehaviour:
     volume: 0.5
     spatialBlend: 1
     pitch: 1
-    loop: 0
+    loop: 1
     audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
     source: {fileID: 0}
