@@ -17,8 +17,8 @@ public class Timer : MonoBehaviour
     private void Start()
     {
         tiempoPuntuacion = 0;
-        //elapsedTime = 420;
-        elapsedTime = 1300;
+        elapsedTime = 420;
+        //elapsedTime = 1300;
         GameObject player = GameObject.FindWithTag("Player");
         player.GetComponent<Player>().BotonPulsado += BotonPulsado;
         GameObject[] listaEventos = GameObject.FindGameObjectsWithTag("evento");
