@@ -1,0 +1,239 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5798887497449142036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8016322742695380017}
+  - component: {fileID: 8435807574028458922}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8016322742695380017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798887497449142036}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.903509, y: 0.11810678, z: -0.040837947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8435807574028458922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5798887497449142036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9674a5e6a8cba5f4a81f9a2a6b4b0d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: AVaca
+    clip: {fileID: 8300000, guid: 8f1cfa078bfa63c4da798bb424633cd1, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1.1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: PVaca
+    clip: {fileID: 8300000, guid: 811206f4447222643ad3e995f1af0ac2, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: horasRestar
+    clip: {fileID: 8300000, guid: 87a77eb5ac9a52544996c35ac9868afa, type: 3}
+    volume: 0.5
+    spatialBlend: 1
+    pitch: 0.9
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: GolpeMartillo
+    clip: {fileID: 8300000, guid: a07e8ef07f6b43748ad7a00e4015e18a, type: 3}
+    volume: 0.7
+    spatialBlend: 1
+    pitch: 1.2
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: pulsarBoton
+    clip: {fileID: 8300000, guid: f6b475d41d5e0a84bbe485234060182c, type: 3}
+    volume: 0.8
+    spatialBlend: 1
+    pitch: 1.2
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: ambiente
+    clip: {fileID: 8300000, guid: cc09f63423447f44c89bbfc7add1eab2, type: 3}
+    volume: 0.7
+    spatialBlend: 1
+    pitch: 0.8
+    loop: 1
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: musicaFondo
+    clip: {fileID: 8300000, guid: 31214de2176c6f548afd168d42e94d04, type: 3}
+    volume: 0.3
+    spatialBlend: 1
+    pitch: 1
+    loop: 1
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: APerro
+    clip: {fileID: 8300000, guid: 0b2afa19cbea4d9428f0583440895179, type: 3}
+    volume: 0.5
+    spatialBlend: 1
+    pitch: 1.2
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: PPerro
+    clip: {fileID: 8300000, guid: 840543a1c3b7dd340b45bd12e62a230d, type: 3}
+    volume: 0.8
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: abrirPuerta
+    clip: {fileID: 8300000, guid: a6201200100a0834e87ec2a96c1fc3c3, type: 3}
+    volume: 0.75
+    spatialBlend: 1
+    pitch: 1.3
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: cerrarPuerta
+    clip: {fileID: 8300000, guid: e973dbec399352e4e860ef9c7cf79c9f, type: 3}
+    volume: 0.6
+    spatialBlend: 1
+    pitch: 1.2
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: abrirTrampilla
+    clip: {fileID: 8300000, guid: 7d7538843a9a1e3448b50d1091db63f6, type: 3}
+    volume: 0.9
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: cerrarTrampilla
+    clip: {fileID: 8300000, guid: 985b6a37cc1507440af78c82736777b6, type: 3}
+    volume: 0.9
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: AAranya
+    clip: {fileID: 8300000, guid: 3e961ade45312044292c057eed9c67eb, type: 3}
+    volume: 0.5
+    spatialBlend: 1
+    pitch: 1.2
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: PAranya
+    clip: {fileID: 8300000, guid: 1fccd2065354d6c429b76b91fbdf041a, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1.3
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: Pboss
+    clip: {fileID: 8300000, guid: dfba65caca20fbf4fa1f549571f773c7, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: Aboss
+    clip: {fileID: 8300000, guid: b93576657a6ce8c44b38796e45b1945c, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: Pt1
+    clip: {fileID: 8300000, guid: 00e347e42bf74d448a119a7bd054c86f, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: Pt2
+    clip: {fileID: 8300000, guid: 8521b73bdb504764eb4ab01b5fca8e50, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: At1
+    clip: {fileID: 8300000, guid: 51073bf38953fef4bbda2c4813e093ed, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: At2
+    clip: {fileID: 8300000, guid: e31d6081abc2d1d4aaca84e1bdaa6467, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: Pminer
+    clip: {fileID: 8300000, guid: 905960fd12ae38e4aa66881416b9a7e8, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: Aminer
+    clip: {fileID: 8300000, guid: 2b9812caf3a3d0549a799692c92ec177, type: 3}
+    volume: 1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: musicaMenu
+    clip: {fileID: 8300000, guid: 519900ff637909a449ee546e43081b3e, type: 3}
+    volume: 0.8
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
