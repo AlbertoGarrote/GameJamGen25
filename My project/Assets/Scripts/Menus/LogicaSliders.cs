@@ -20,6 +20,7 @@ public class LogicaSliders : MonoBehaviour
         }
         else
         {
+            sliderVolumen.value = 0.5f;
             ChangeVolumenSlider();
         }
     }
