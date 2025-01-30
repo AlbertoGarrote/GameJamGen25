@@ -21,6 +21,7 @@ public class MenuPausa : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape) && puedePausarse == true)
         {
+            SoundManager.instance.PlaySound("papel", new Vector3(0, 0, 0));
             puedePausarse = false;
             Time.timeScale = 0f;
             menuPausa.SetActive(true);
@@ -31,12 +32,14 @@ public class MenuPausa : MonoBehaviour
     public void Continuar()
     {
         Time.timeScale = 1f;
+        SoundManager.instance.PlaySound("firma", new Vector3(0, 0, 0));
         StartCoroutine("despausar");       
     }
 
     public void SalirJuegoPausa()
     {
         Time.timeScale = 1f;
+        SoundManager.instance.PlaySound("firma", new Vector3(0, 0, 0));
         StartCoroutine("volverMenu");
     }
 

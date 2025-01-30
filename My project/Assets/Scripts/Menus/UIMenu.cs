@@ -52,12 +52,14 @@ public class UIMenu : MonoBehaviour
     }
     public void OptionsPanel()
     {
+        SoundManager.instance.PlaySound("boton", new Vector3(0, 0, 0));
         menuOpciones.SetActive(true);
         menuPrincipal.SetActive(false);
 
     }
     public void OptionsPanelVolver()
     {
+        SoundManager.instance.PlaySound("boton", new Vector3(0, 0, 0));
         menuOpciones.SetActive(false);
         menuPrincipal.SetActive(true);
     }
@@ -65,12 +67,14 @@ public class UIMenu : MonoBehaviour
 
     public void SalirJuego()
     {
+        SoundManager.instance.PlaySound("boton", new Vector3(0, 0, 0));
         Application.Quit();
         print("Saliste del videojuego");
     }
 
     IEnumerator jugar()
     {
+        SoundManager.instance.PlaySound("boton", new Vector3(0, 0, 0));
         transicionPanel.SetActive(true);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("EscenaCarta");

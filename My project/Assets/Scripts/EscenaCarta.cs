@@ -10,6 +10,7 @@ public class EscenaCarta : MonoBehaviour
     void Start()
     {
         SoundManager.instance.PlaySound("musicaTension", new Vector3(0, 0, 0));
+        SoundManager.instance.PlaySound("papel", new Vector3(0, 0, 0));
     }
 
     public void siguienteEscena()
@@ -19,6 +20,7 @@ public class EscenaCarta : MonoBehaviour
 
     IEnumerator siguiente()
     {
+        SoundManager.instance.PlaySound("firma", new Vector3(0, 0, 0));
         paneltransicion.SetActive(true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("EscenaPrincipal");

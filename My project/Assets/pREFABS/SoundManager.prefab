@@ -234,7 +234,7 @@ MonoBehaviour:
     volume: 0.8
     spatialBlend: 1
     pitch: 1
-    loop: 0
+    loop: 1
     audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
     source: {fileID: 0}
   - name: musicaTension
@@ -243,5 +243,53 @@ MonoBehaviour:
     spatialBlend: 1
     pitch: 1
     loop: 1
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: papel
+    clip: {fileID: 8300000, guid: 8536f7d7f92f78b4e8d4f7985886322f, type: 3}
+    volume: 0.3
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: musicaFinal
+    clip: {fileID: 8300000, guid: 38fd06ca27f2fd24f8be74388afc56be, type: 3}
+    volume: 0.3
+    spatialBlend: 1
+    pitch: 1
+    loop: 1
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: reloj
+    clip: {fileID: 8300000, guid: 8846180f916d21f499da11bbe716d101, type: 3}
+    volume: 0.5
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: HS
+    clip: {fileID: 8300000, guid: 70c943611c6f45b44b407c9a13ec170d, type: 3}
+    volume: 0.1
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: boton
+    clip: {fileID: 8300000, guid: d40cce8d0fc1bea46b4ca406fabb6524, type: 3}
+    volume: 0.9
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
+    audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
+    source: {fileID: 0}
+  - name: firma
+    clip: {fileID: 8300000, guid: 5e5d43f1ffe07fb429848fea8973ec01, type: 3}
+    volume: 0.5
+    spatialBlend: 1
+    pitch: 1
+    loop: 0
     audioMixerGroup: {fileID: 24300002, guid: e38a14504f6c8fb46974c39ca1391ae4, type: 2}
     source: {fileID: 0}

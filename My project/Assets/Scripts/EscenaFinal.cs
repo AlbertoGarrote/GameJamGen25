@@ -30,21 +30,23 @@ public class EscenaFinal : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", horasP, minutosP);
         highscore = false;
         metido = false;
-
+        
         calcularHighScore();
 
-        //SoundManager.instance.PlaySound("musicaTension", new Vector3(0, 0, 0));
+        SoundManager.instance.PlaySound("musicaFinal", new Vector3(0, 0, 0));
+        SoundManager.instance.PlaySound("reloj", new Vector3(0, 0, 0));
 
         StartCoroutine("final");
     }
 
     IEnumerator final()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         botonVolver.SetActive(true);
         if(highscore)
         {
             HStext.SetActive(true);
+            SoundManager.instance.PlaySound("HS", new Vector3(0, 0, 0));
         }
     }
 
@@ -56,6 +58,7 @@ public class EscenaFinal : MonoBehaviour
 
     IEnumerator siguiente()
     {
+        SoundManager.instance.PlaySound("boton", new Vector3(0, 0, 0));
         paneltransicion.SetActive(true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("MenuInicial");
